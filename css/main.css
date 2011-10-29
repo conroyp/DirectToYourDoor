@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Tahoma;
+    font-size: 10pt;
+}
+
+#map_canvas {
+    height: 80%;
+}
+
+#directions-text {
+    padding: 5px;
+}
+#directions-steps {
+    text-align: center;
+}
+#directions-panel {
+    width: 100%;
+    text-align:center;
+    overflow: auto;
+    margin: 3px;
+}
+#lbut {
+    float: left;
+}
+#rbut {
+    float: right;
+}
+#type-toggle {
+    width: 103px;
+    height: 29px;
+    background: url(../i/allbut.png);
+    margin: 0px auto; 
+    padding: 0;
+    position: relative;
+}
+ul {
+    margin:0;
+    padding: 0;
+}
+#type-toggle li {
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+#type-toggle li, #type-toggle a {
+    height: 29px;
+    display: block;
+}
+#driving {
+    left: 0;
+    width: 52px;
+}
+#walking {
+    left: 52px;
+    width: 52px;
+}
+
+.active-driving {
+    background: transparent url(../i/allbut.png)
+        0px -29px no-repeat;
+}
+.active-walking {
+    background: transparent url(../i/allbut.png)
+        -52px -29px no-repeat;
+}

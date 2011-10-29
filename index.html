@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="UTF-8">
+        <title>Direct to your door</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript"
+            src="js/directions.js"></script>
+        <script type="text/javascript">
+            // These are the co-ordinates of the final destination
+            var lat = 53.342712;
+            var lng = -6.268644;
+            var defaultZoom = 16;
+
+            // Load the map once the page is ready       
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        <div id="map_canvas"></div>
+        <div id="directions-panel">
+            <div id="type-toggle">
+                <ul>
+                    <li id="driving" class="active-driving" onclick="toggleDirectionsType('driving');calcRoute();"></li>
+                    <li id="walking" onclick="toggleDirectionsType('walking');calcRoute();"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="directions-steps">
+            <div id="rbut" onclick="setStep(currentStep+1);">
+                <img src="i/rbut.png" alt="Next" />
+            </div>
+            <div id="lbut" onclick="setStep(currentStep-1);">
+                <img src="i/lbut.png" alt="Back" />
+            </div>
+            <div id="directions-text" onclick="setStep(currentStep+1);">Please ensure GPS is enabled to get directions</div>
+        </div>
+    </body>
+</html>
